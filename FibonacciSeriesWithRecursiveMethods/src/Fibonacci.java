@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Fibonacci {
     static int fib(int number) {
         // if kullanarak programı fazla çalıştırarak hat almaktan kaçınıyorum.
-        if (number == 1 || number ==2) {
+        if (number == 1 || number == 2) {
             return 1;
         }
         // fibonacci serimi oluşturmak için bu formülü kullandım.
