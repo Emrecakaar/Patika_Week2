@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 public class Polindrom {
-// boolean veri tipi; isPolindrom metot adı ile istediğim sonuca ulaştığımda ekrana doğru yazmasını amaçladım.
+    // boolean veri tipi; isPolindrom metot adı ile istediğim sonuca ulaştığımda ekrana doğru yazmasını amaçladım.
     static boolean isPolindrom(int number) {
         // number değişkenimi temp ile eşitleyerek true false da hata almaktan kaçtım.
 
@@ -11,14 +13,18 @@ public class Polindrom {
             temp /= 10;
 
         }
-        if (reverseNumber == number) // Polindrom sayısı ise ekrana true değilse false yazısını vermesini istedim.
-            return true;
-        else
-            return false;
+        return (reverseNumber == number) ;
     }
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz : ");
+        int number = input.nextInt();
 
-        System.out.print(isPolindrom(101)) ;
+        if (isPolindrom(number)) {
+            System.out.println(number + " sayısı bir polindromdur.");
+        } else {
+            System.out.print(number + " sayısı bir polindrom değildir.");
+        }
     }
 }
