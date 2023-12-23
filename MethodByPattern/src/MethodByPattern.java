@@ -1,16 +1,17 @@
 import java.util.Scanner;
 
 public class MethodByPattern {
-    static void printPattern(int number1, int number2, boolean isMethod) {
+    static void printPattern(int number1,int number2, boolean isMethod) {
+
         if (number1 > 0 && isMethod) {
             System.out.print(number1 + " ");
-            printPattern(number1 - 5, number2, true);
+            printPattern(number1 - 5,number2, true);
         } else if (number1 <= 0) {
             System.out.print(number1 + " ");
-            printPattern(number1 + 5, number2, false);
-        } else if (number1 > 0 && number1 <= number2 && !isMethod) {
+            printPattern(number1 + 5,number2, false);
+        } else if (number1 > 0 && number1 <= number2 && !isMethod)  {
             System.out.print(number1 + " ");
-            printPattern(number1 + 5, number2, false);
+            printPattern(number1 + 5,number2, false);
         }
     }
 
